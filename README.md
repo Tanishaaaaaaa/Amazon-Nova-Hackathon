@@ -66,10 +66,3 @@ We use PostgreSQL.
 2. Deploy the Frontend to AWS S3 + CloudFront.
 3. Use Amazon RDS for PostgreSQL.
 4. Set up IAM roles with exact permissions for Amazon Nova model invocations.
-
-## 🎥 3-Minute Demo Script
-1. **0:00 - 0:30 (Overview)**: "Welcome to NovaCare. We use Amazon Nova to completely automate healthcare workflows."
-2. **0:30 - 1:15 (Voice AI)**: Demonstrate the Voice Interface using Nova 2 Sonic. Push the record button, speak symptoms (e.g., 'I have a severe headache and fever'). Show it convert to intent JSON and triage via Nova 2 Lite.
-3. **1:15 - 2:00 (Docs Extraction)**: Upload a sample handwritten prescription. Show Multimodal Embeddings extract medicines and diagnosis.
-4. **2:00 - 2:45 (Nova Act Automation)**: Trigger the Nova Act agent. Show the agent automatically navigating a dummy hospital portal to book the recommended appointment, filling in the patient details extracted from logic.
-5. **2:45 - 3:00 (Impact Summary)**: Highlight reduction in admin work and faster triage times.
