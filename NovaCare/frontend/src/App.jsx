@@ -103,9 +103,9 @@ export default function App() {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-900/20 blur-[120px]" />
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto p-6 flex flex-col h-screen">
+            <div className="relative z-10 max-w-7xl mx-auto p-6 flex flex-col min-h-screen">
                 {/* Header */}
-                <header className="flex justify-between items-center py-6 border-b border-gray-800/50 mb-6">
+                <header className="flex justify-between items-center py-6 border-b border-gray-800/50 mb-6 text-indigo-400">
                     <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
                             <Brain className="text-white w-6 h-6" />
@@ -125,7 +125,7 @@ export default function App() {
                 </header>
 
                 {activeTab === 'dashboard' && (
-                    <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden pb-6">
+                    <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-auto pb-6">
 
                         {/* Left Column: Actions & Patient Data */}
                         <div className="lg:col-span-4 flex flex-col space-y-6 overflow-y-auto pr-2 custom-scrollbar">
