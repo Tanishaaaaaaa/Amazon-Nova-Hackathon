@@ -1,0 +1,32 @@
+domain: healthcare_automation
+agents:
+  - id: booking_agent
+    name: Hospital Appointment Configuration Agent
+    model: amazon.nova-act-v1
+    description: Automates UI to book hospital appointments based on unstructured user symptom inputs
+    
+    tools:
+      - name: navigate_browser
+        description: Command browser to go to hospital patient portal
+      - name: click_element
+        description: Clicks on matching UI nodes
+      - name: enter_text
+        description: Insert patient medical data
+        
+    workflow:
+      step_1:
+        action: navigate_browser
+        target: "https://dummy-hospital-portal.example.com/login"
+      step_2:
+        action: enter_text
+        target: "#patient_symptoms"
+        input: "{patient_symptoms}"
+      step_3:
+        action: click_element
+        target: "button[text()='Find Earliest Availability']"
+      step_4:
+        action: handle_popup
+        fallback: "Dismiss any insurance popups before continuing"
+      step_5:
+        action: finalize_booking
+        target: "#confirm_btn"
